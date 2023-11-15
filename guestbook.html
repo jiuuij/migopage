@@ -29,7 +29,30 @@
       </nav>
     </header>
   </section>
-  방명록 쓰고가이소~
+  <section class="guestbook-wrap">
+    <h1 class="guestbook-title">방명록을 남겨주세요</h1>
+    <article class="guestbook-contents">
+      <form name="f">
+        <table id="t1">
+          <tr>
+            <th> 작성자</th>
+            <td><input class="user" type="text" name="writer" id="writer"></td>
+            <th> 비밀번호</th>
+            <td><input class="user" type="password" name="pwd" id="pwd"></td>
+          </tr>
+          <tr>
+            <th> 내용</th>
+            <td><input class="user-content" type="text" name="content" id="content"></td>
+          </tr>
+          <tr>
+            <td><input class="save" type="button" name="저장" value="저장" onclick="a()"></td>
+          </tr>
+        </table>
+      </form>
+      <div id="list">
+        <!-- //id 가 list 인 div에 계속 넣는 것, 우리가 코드를 치는 것과 동일하게 계속 내용이 들어가고 있다. -->
+    </article>
+  </section>
   <footer class="bottom">
     <div>
       <a href="./index.html">
@@ -52,7 +75,7 @@
     </div>
   </footer>
   <!-- JavaScript -->
-  <script src=""></script>
+  <script src="./guestbook.js"></script>
 </body>
 
 </html>
