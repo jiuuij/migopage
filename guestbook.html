@@ -30,27 +30,62 @@
     </header>
   </section>
   <section class="guestbook-wrap">
-    <h1 class="guestbook-title">방명록을 남겨주세요</h1>
     <article class="guestbook-contents">
-      <form name="f">
-        <table id="t1">
-          <tr>
-            <th> 작성자</th>
-            <td><input class="user" type="text" name="writer" id="writer"></td>
-            <th> 비밀번호</th>
-            <td><input class="user" type="password" name="pwd" id="pwd"></td>
-          </tr>
-          <tr>
-            <th> 내용</th>
-            <td><input class="user-content" type="text" name="content" id="content"></td>
-          </tr>
-          <tr>
-            <td><input class="save" type="button" name="저장" value="저장" onclick="a()"></td>
-          </tr>
-        </table>
-      </form>
-      <div id="list">
-        <!-- //id 가 list 인 div에 계속 넣는 것, 우리가 코드를 치는 것과 동일하게 계속 내용이 들어가고 있다. -->
+      <div class="guestbook-list-container">
+        <h1 class="guestbook-title">미고에게 방명록을 남겨주세요</h1>
+        <form class="guestbook-input" name="f">
+          <div>
+            <table id="t1">
+              <tr>
+                <th> 작성자</th>
+                <td><input class="user-input" type="text" name="writer" id="writer" value=""></td>
+                <th> 비밀번호</th>
+                <td><input class="user-input" type="password" name="pwd" id="pwd" value=""></td>
+              </tr>
+              <tr>
+                <th> 내용</th>
+                <td><textarea class="user-content" type="text" name="content" id="content" maxlength="200"
+                    oninput="countText()"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td><input class="
+                btn-save" type="button" name="저장" value="저장" onclick="a()"></td>
+              </tr>
+            </table>
+            <div id="usertext"></div>
+          </div>
+        </form>
+        <h2 class="guestbook-title">미고에게 남긴 방명록 목록</h2>
+        <div id="overlay-delete">
+          <div id="modal-delete">
+            <p>정말 삭제하시겠습니까?</p>
+            <button class="btn-modal" onclick="deleteConfirmed()">네</button>
+            <button class="btn-modal" onclick="closeModal('overlay-delete')">아니요</button>
+          </div>
+        </div>
+        <div id="overlay-edit" data-entry="{...}">
+          <div id="modal-edit">
+            <p>수정하시려면 비밀번호를 입력해주세요.</p>
+            <label for="passwordInput">비밀번호 : </label>
+            <input type="password" id="passwordInput" /></br>
+            <button class="btn-modal" onclick="submitPassword()">확인</button>
+            <button class="btn-modal" onclick="closeModal('overlay-edit')">취소</button>
+          </div>
+        </div>
+        <div id="overlay-re">
+          <div id="modal-re">
+          </div>
+        </div>
+        <div class="btn-top">
+          <a href="">
+            <img src="./png/scroll-top-btn.png" href="#header" alt="위로가기 버튼">
+          </a>
+        </div>
+        <div id="list">
+          <!-- //id 가 list 인 div에 계속 넣는 것, 우리가 코드를 치는 것과 동일하게 계속 내용이 들어가고 있다. -->
+        </div>
+      </div>
     </article>
   </section>
   <footer class="bottom">
