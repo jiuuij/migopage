@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>미고의 일상</title>
+  <title>미고와 친구들</title>
 
   <link rel="stylesheet" href="./style.css">
 
@@ -26,12 +26,24 @@
       </nav>
     </header>
   </section>
-
-  <div class="photo-wrap">
-    <h1>미고의 일상들</h1>
-  </div>
-
-  <ul id="photo-List"></ul>
+  <article class="friend-wrap">
+    <h1 class="guestbook-title">미고와 친구가 되어 주세요</h1>
+    <div class="friend-contents">
+      <div>
+        <label for="friendName">친구 이름</label>
+        <input type="text" id="friendName" placeholder="이름을 입력해주세요."><br>
+      </div>
+      <div>
+        <label for="friendBirthday">친구 생일</label>
+        <input type="number" id="friendBirthday" placeholder="숫자만 입력해주세요."><br>
+      </div>
+      <div>
+        <label for="friendImage">친구 사진</label>
+        <input type="file" id="friendImage" accept="image/*"><br> </div>
+      <button onclick="addFriend()" class="btn-add">친구 추가</button>
+    </div>
+    <ul id="friendList"></ul>
+  </article>
 
   <div id="overlay-delete">
     <div id="modal-delete">
@@ -81,7 +93,7 @@
     </div>
   </footer>
   <!-- JavaScript -->
-  <script src="./photobook.js"></script>
+  <script src="./friend.js"></script>
 </body>
 
 </html>

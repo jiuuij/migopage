@@ -502,3 +502,33 @@ a {
     margin: 20px;
   }
 }
+
+/* 사진첩 */
+.friend-wrap {
+  margin: calc(5%) calc(20%);
+}
+
+.friend-contents {
+  position: relative;
+  color: #543C10;
+  margin: calc(5%) calc(40%);
+  text-align: center;
+}
+
+.friend-contents input {
+  font-size: 15px;
+  margin-bottom: calc(5%);
+}
+
+.btn-add{
+  width: 50px;
+  font-family: 'Goyang';
+  font-weight: bold;
+  color: #543C10;
+  background-color: bisque;
+  border: none;
+  border-radius: 10px;
+  margin-left: 25%;
+  margin-top: 20px;
+  width: 80px;
+}
